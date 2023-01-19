@@ -43,10 +43,9 @@
         })
     }
 
-    function searchYear() {
-        let year = parseInt($("#year").val());
+    function searchBirthday() {
         let TestDataClass = ncmb.DataStore(db);
-        TestDataClass.equalTo("year", year).fetchAll()
+        TestDataClass.order("birthday", false).fetchAll()
             .then(function(results) {
                 showResults(results);
             })
@@ -95,8 +94,8 @@
   <div id="button">
     <button class="btn" onclick="fetchAll()">Fetch All</button>
     <button class="btn" onclick="searchName()">Name</button><br>
+    <button class="btn" onclick="searchBirthday()">Birthday</button>
     <button class="btn" onclick="searchYearLT()">Year &lt;</button>
-    <button class="btn" onclick="searchYear()">Year</button>
     <button class="btn" onclick="searchYearGT()">Year &gt;</button>
   </div>
   <div id="message">message area</div>
