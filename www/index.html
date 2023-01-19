@@ -65,13 +65,13 @@
 
     function showResults(results) {
       // テーブルのヘッダを生成
-      let msg = "<table><tr><th>name</th><th>Year</th><th>birth</th><th>title</th></tr>";
+      let msg = "<table><tr><th>name</th><th>birthday</th><th>year</th><th>title</th></tr>";
       for (let i = 0; i < results.length; i++) {
         // 各データを収めた表の列を生成
         msg += "<tr>";
         msg += "<td>" + results[i].name + "</td>";
-        msg += "<td class='num'>" + results[i].year + "</td>";
         msg += "<td class='num'>" + results[i].birthday + "</td>";
+        msg += "<td class='num'>" + results[i].year + "</td>";
         msg += "<td class='num'>" + results[i].title + "</td>";
         msg += "</tr>";
       }
@@ -83,7 +83,7 @@
 </head>
 
 <body>
-  <h1>mBaaS search</h1>
+  <h1>私の歴代推し</h1>
   <div>
     <label for="name">name:</label>
     <input id="name" type="text" placeholder="monster name">
