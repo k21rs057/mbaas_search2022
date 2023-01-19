@@ -1,9 +1,13 @@
 /**/
 body {
-  background-color: aqua;
+  background-image: url(Image.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+
 h1 {
-  background-color: yellow;
+  background-color: rgb(253, 206, 214);
 }
 
 label {
@@ -29,7 +33,7 @@ input {
   width: 5em;
   border-radius: 10px;
   color: white;
-  background-color: blue;
+  background-color: rgb(252, 90, 117);
 }
 
 #message {
